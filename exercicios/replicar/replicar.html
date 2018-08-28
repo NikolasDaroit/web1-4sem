@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creative Studio</title>
+	<style type="text/css">
+		body {
+			background-color: #F4F4F4;
+			font-family: "Arial";
+
+		}
+
+		.container {
+			/*top right bottom left*/
+			margin: 0 15% 0 15%;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			color: orange;
+			display: block;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: small;
+			vertical-align: center;
+		}
+		.footer li a {
+			color: #AEAEAE;
+			display: block;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: small;
+			vertical-align: center;
+
+		}
+		#footer-nav {
+			list-style: none;
+		}
+		#footer-nav ul {
+			/*float: left; margin-left: 15%;*/
+		}
+		#footer-nav li{
+		    display: inline;
+		    padding: 0 3px;
+		    border-left: solid 1px black;
+		} 
+		#footer-nav img {
+		    float: right; margin-right: 15%;
+
+		}
+		#footer-nav li:first-child{
+		    border-left: none;
+		}
+		.card a {
+			color: orange;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.line {
+			line-height: 100px;
+		}
+		.smallline {
+			line-height: 10px
+		}
+		li a:hover, .card a:hover {
+			color: black;
+		    
+		}
+		.banner img {
+			max-width:100%;
+			max-height:100%;
+		}
+		.links{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			justify-content: space-evenly;
+		}
+		.portfolio {
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			justify-content: space-evenly;
+			position: relative;
+		    text-align: center;
+		    color: black;
+		    font-weight: bold;
+		}
+		.bottom-right {
+		    /*bottom: 100%;
+		    right: 50%;*/
+		    background-color: #FE9A00;
+		   /* width: 30%;
+		    height: 10%;
+		    float:right;*/
+
+		    position: absolute;
+		    bottom: 6px;
+		    right: 	5px;
+		    font-size: 15px;
+
+
+
+		}
+		.bottom-right a {
+			color: black;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.portfolio img {
+			max-width:100%;
+		}
+		.author {
+			font-style: oblique;
+			font-size: small;
+			font-weight: bold;
+		}
+		.card {
+			margin: 5px;
+		}
+
+		.card-header {
+			font-weight: bold;
+		}
+		.card-body {
+			color: #AEAEAE;
+		}
+		.card hr {
+			border: 0;
+			color: #000;
+			background-color: #000;
+			height: 3px;
+		}
+		.pos-relative {
+			position: relative;
+		}
+		.updates-contact {
+			display: grid;
+			grid-template-columns: 70% 30%;
+			justify-content: space-around;
+			grid-auto-columns: auto;
+		}
+		.social {
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			justify-content: space-around;
+			grid-auto-columns: auto;
+		}
+		.social img { 
+			max-width:50%;
+		}
+		.footer {
+			display: grid;
+			grid-template-columns: 70% 30%;
+			justify-content: space-around;
+			grid-auto-columns: auto;
+			width: 100vw;
+			background-color: #E0E0E0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<ul>
+			  	<li><a href="#"><img alt="mias" src="./logo.png"></a></li>
+				<li class="line"><a href="#">HOME</a></li>
+				<li class="line"><a href="#">ABOUT US </a></li>
+				<li class="line"><a href="#">PORTFOLIO</a></li>
+				<li class="line"><a href="#">SERVICES</a></li>
+				<li class="line"><a href="#">BLOG</a></li>
+				<li class="line"><a href="#">CONTACT US</a></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="banner">
+			<img alt="mias" src="./banner.png">
+		</div>
+		<hr>
+		<div class="links">
+			<div class="card">
+				<div class="card-header">
+					&rarr; ABOUT US
+				</div>
+				<hr>
+				<div class="card-body">
+					<p>Nel timido soffio del vento
+						Al nuovo sorriso del sol
+						Si scopre la valle dorata
+						Incanto d'anima e cor
+
+						Sentiero ce ormai ti nascondi
+						Rivela la via che fu
+						Tra quercia, castano ed abete
+						Al nostro passo silente
+					</p>
+				</div>
+				&rarr; <a href="https://www.youtube.com/watch?v=4t4a0Eto1ok">READ</a>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					&rarr; OUR BENEFITS
+				</div>
+				<hr>
+				<div class="card-body">
+					<input class="flatbox" type="checkbox" name="benefits" checked> 
+					Odori sfumati nel senso
+						Colori ormai senza eta'
+						Tra resine ed erbe inebrianti
+						Tra ombra e verita'<br>
+
+					<input class="flatbox" type="checkbox" name="benefits" checked> Leggiadra visione di sogno
+						E di parallela realta'
+						Transcendi l'umana coscienza
+						Pacando il mio fiero ardore<br>
+					
+					<input class="flatbox" type="checkbox" name="benefits" checked> Or splende in me la tua luce
+						Nel suo riflesso pace ed amor
+						Il verde intimo manto
+						E della roccia il grigio pudor
+						Incanto e pura energia
+						Ricolma d'antica saggezza<br>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					&rarr; TESTIMONIALS
+				</div>
+				<hr>
+				<div class="card-body">
+					<p> Lo canto la tua meraviglia
+						Divina e mistica essenza
+						Incanto e vera magia
+						Tra neve, rugiada e tempesta
+						Nel sogno, mito e leggenda
+						Lo spirito della foresta
+					</p>
+				</div>
+				<p class="author">Heroes Of The Waterfalls' Kingdom - Rhapsody of Fire</p>
+			</div>
+		</div>
+		<hr>
+		<div class="portfolio">
+			<div class="card pos-relative"> 
+				<img alt="mias" src="./portf1.png">
+				<div class="bottom-right">
+					<a href="#">VIEW &rarr;</a>
+				</div>
+			</div> 
+			<div class="card pos-relative"> 
+				<img alt="mias" src="./portf2.png">
+				<div class="bottom-right">
+					<a href="#">VIEW &rarr;</a>
+				</div>
+			</div>
+			<div class="card pos-relative"> 
+				<img alt="mias" src="./portf3.png">
+				<div class="bottom-right">
+					<a href="#">VIEW &rarr;</a>
+				</div>
+			</div>
+
+			<div class="card pos-relative"> 
+				<img alt="mias" src="./portf4.png">
+				<div class="bottom-right">
+					<a href="#">VIEW &rarr;</a>
+				</div>
+			</div>
+
+		</div>
+		<hr>
+		<div class="updates-contact">
+			<div class="card">
+				<div class="card-header">
+					&rarr; BLOG UPDATES
+				</div>
+				<div class="card-body">
+					<p> Listen Morty, I hate to break it to you, but what people calls "love" is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it. Break the cycle, Morty. Rise above. Focus on science.
+					</p>
+				</div>
+				
+			</div>
+			<div class="card">
+				<div class="card-header">
+					&rarr; CONNECT WITH US
+				</div>
+				<div class="card-body social">
+					<img alt="mias" src="./youtube.ico">
+					<img alt="mias" src="./github.png">
+					<img alt="mias" src="./reddit.png">
+					<img alt="mias" src="./twitter.png">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<ul id="footer-nav">
+			<li class="smallline"><a href="#">Home</a></li>
+			<li class="smallline"><a href="#">About Us</a></li>
+			<li class="smallline"><a href="#">Portfolio</a></li>
+			<li class="smallline"><a href="#">Services</a></li>
+			<li class="smallline"><a href="#">Blog</a></li>
+			<li class="smallline"><a href="#">Contact Us</a></li>
+			<li class="smallline"><a href="#">&copy; 2010 CreativeStudio. All Rights Reserved</a></li>
+		</ul>
+			<a href="#" ><img alt="mias" src="./logo.png"></a>
+
+	</div>	
+	
+</body>
+</html>
