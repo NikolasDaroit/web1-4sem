@@ -6,7 +6,8 @@
 		body {
 			background-color: #F4F4F4;
 			font-family: "Arial";
-
+			margin: 0;
+			padding: 0;
 		}
 
 		.container {
@@ -52,7 +53,8 @@
 		#footer-nav li{
 		    display: inline;
 		    padding: 0 3px;
-		    border-left: solid 1px black;
+		    border-left: solid 1px #AEAEAE;
+		    
 		} 
 		#footer-nav img {
 		    float: right; margin-right: 15%;
@@ -158,12 +160,23 @@
 			max-width:50%;
 		}
 		.footer {
-			display: grid;
-			grid-template-columns: 70% 30%;
-			justify-content: space-around;
-			grid-auto-columns: auto;
-			width: 100vw;
+			display: block;
+			/*grid-template-columns: 70% 30%;*/
+			/*justify-content: space-around;*/
+			/*grid-auto-columns: auto;*/
+			width: 100%;
 			background-color: #E0E0E0;
+		}
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+		.footer a {
+			color: #AEAEAE;
+			text-decoration: none;
+			font-size: small;
 		}
 	</style>
 </head>
@@ -303,16 +316,21 @@
 		</div>
 	</div>
 	<div class="footer">
-		<ul id="footer-nav">
-			<li class="smallline"><a href="#">Home</a></li>
-			<li class="smallline"><a href="#">About Us</a></li>
-			<li class="smallline"><a href="#">Portfolio</a></li>
-			<li class="smallline"><a href="#">Services</a></li>
-			<li class="smallline"><a href="#">Blog</a></li>
-			<li class="smallline"><a href="#">Contact Us</a></li>
-			<li class="smallline"><a href="#">&copy; 2010 CreativeStudio. All Rights Reserved</a></li>
-		</ul>
-			<a href="#" ><img alt="mias" src="./logo.png"></a>
+		<div class="container">
+			<div class="left">
+				<ul id="footer-nav">
+					<li class="smallline"><a href="#">Home</a></li>
+					<li class="smallline"><a href="#">About Us</a></li>
+					<li class="smallline"><a href="#">Portfolio</a></li>
+					<li class="smallline"><a href="#">Services</a></li>
+					<li class="smallline"><a href="#">Blog</a></li>
+					<li class="smallline"><a href="#">Contact Us</a></li>
+				</ul>
+				<p><a href="#">&copy; 2010 CreativeStudio. All Rights Reserved</a></p>
+			</div>
+			<a href="#" class="right"><img alt="mias" src="./logo.png"></a>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
 
 	</div>	
 	
