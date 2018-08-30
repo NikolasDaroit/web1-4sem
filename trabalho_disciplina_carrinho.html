@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loja Virtual</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="./trabalho_disciplina.css" >
+	<script src="./trabalho_disciplina.js"></script>
+
+	<style type="text/css">
+		
+		.container {
+		  margin-left: 8%;
+		  margin-top: 10px;
+		  display: grid;
+		  grid-template-columns: auto;
+		  justify-content: space-evenly;
+		  float: left;
+		}
+		.produtos {
+			max-width: 5%;
+		}
+		.description {
+			margin-right: 10%;
+		}
+	</style>
+
+
+	
+</head>
+<body>
+	<div class="menu">
+		
+	</div>
+	<div class="navbar">
+		<ul>
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Products</a></li>
+		  <li><a href="#">Contact</a></li>
+		  <li><a href="#">About</a></li>
+		  <li> 
+			<a id="#cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg	"></i></a>
+		  </li>
+		</ul>
+		
+	</div>
+	<div class="container produtos">
+		
+	</div>
+	<div class="container description">
+
+		
+	</div>
+	<div class="container total">
+
+
+		<div id="carrinhodecompras">
+			<table >
+			    <thead>
+			        <tr>
+			            <th width="60%">Produto</th>
+			            <th width="16%">Quantidade</th>
+			            <th width="12%">Unitário</th>
+			            <th width="12%">Total</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+				</tbody>
+			</table>
+		
+		</div>		
+	</div>
+
+</body>
+<footer>
+	<script type="text/javascript">
+		
+		$(function() {
+	   		let searchParams = new URLSearchParams(window.location.search)
+			if (searchParams.has('image')){
+
+				let number = searchParams.get('image');
+				// $('#carrinhodecompras > tbody:last-child').append('<tr><td><img href></tr>');
+				appendImage(number,  ".produtos");
+				appendImage(1 + Math.floor(Math.random() * 50),  ".produtos");
+				appendImage(1 + Math.floor(Math.random() * 50),  ".produtos");
+
+				var text = '<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus enim, tincidunt nec tempor eu, ultricies id velit. Fusce nec varius tellus. Donec vulputate, sem non pharetra pellentesque, lectus orci facilisis dui, ut sodales ipsum ligula eu ante. Nulla rutrum tincidunt arcu. Suspendisse pellentesque imperdiet nulla quis iaculis. Sed nibh erat, pharetra nec congue ut, luctus nec metus. Maecenas tristique urna at sagittis tempus. Nulla et dolor dapibus, tempor metus in, aliquam est. Morbi sollicitudin congue tellus, ac pharetra diam dictum nec. Phasellus nibh sapien, dictum at pharetra vel, auctor hendrerit orci. </section>' 
+				$( text ).appendTo('.description')
+				
+			}else{
+				for (var i = 0; i < 3; i++) {
+					var number = 1 + Math.floor(Math.random() * 50);
+					appendImage(number);
+				
+				}
+			}
+
+		});
+	</script>
+</footer>
+</html>

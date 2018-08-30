@@ -2,33 +2,13 @@
 <html>
 <head>
 	<title>Loja Virtual</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="./trabalho_disciplina.css" >
+	<script src="./trabalho_disciplina.js"></script>
+
 	<style type="text/css">
-		ul {
-		    list-style-type: none;
-		    margin: 0;
-		    padding: 0;
-		    overflow: hidden;
-		    background-color: #333;
-		}
-
-		li {
-		    float: left;
-		}
-
-		li a {
-		    display: block;
-		    color: white;
-		    text-align: center;
-		    padding: 14px 16px;
-		    text-decoration: none;
-		}
-
-		li a:hover {
-		    background-color: #111;
-		}	
-		.navbar {
-			
-		}
 		.container {
 		  margin-top: 10px;
 		  display: grid;
@@ -37,7 +17,6 @@
 		}
 	</style>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 </head>
 <body>
@@ -50,7 +29,11 @@
 		  <li><a href="#">Products</a></li>
 		  <li><a href="#">Contact</a></li>
 		  <li><a href="#">About</a></li>
+		  <li> 
+			<a id="#cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg	"></i></a>
+		  </li>
 		</ul>
+		
 	</div>
 	<div class="container produtos">
 
@@ -71,21 +54,14 @@
 			if (searchParams.has('image')){
 
 				let number = searchParams.get('image');
-				card  =  '<div class="card" data-image="'+number+'">'
-							+ '  <img src="https://picsum.photos/200/200/?image='+number+'" alt="" style="width:100%">'
-							+ '  <div class="container">'
-							+ '    <p>Architect & Engineer</p> '
-							+ '  </div>'
-							+ '</div>'
-
-					$( card ).appendTo( ".produtos" );
-					var text = '<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus enim, tincidunt nec tempor eu, ultricies id velit. Fusce nec varius tellus. Donec vulputate, sem non pharetra pellentesque, lectus orci facilisis dui, ut sodales ipsum ligula eu ante. Nulla rutrum tincidunt arcu. Suspendisse pellentesque imperdiet nulla quis iaculis. Sed nibh erat, pharetra nec congue ut, luctus nec metus. Maecenas tristique urna at sagittis tempus. Nulla et dolor dapibus, tempor metus in, aliquam est. Morbi sollicitudin congue tellus, ac pharetra diam dictum nec. Phasellus nibh sapien, dictum at pharetra vel, auctor hendrerit orci. </section>' 
-					$( text ).appendTo('.description')
+				appendImage(number, '.produtos');
+				var text = '<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus enim, tincidunt nec tempor eu, ultricies id velit. Fusce nec varius tellus. Donec vulputate, sem non pharetra pellentesque, lectus orci facilisis dui, ut sodales ipsum ligula eu ante. Nulla rutrum tincidunt arcu. Suspendisse pellentesque imperdiet nulla quis iaculis. Sed nibh erat, pharetra nec congue ut, luctus nec metus. Maecenas tristique urna at sagittis tempus. Nulla et dolor dapibus, tempor metus in, aliquam est. Morbi sollicitudin congue tellus, ac pharetra diam dictum nec. Phasellus nibh sapien, dictum at pharetra vel, auctor hendrerit orci. </section>' 
+				$( text ).appendTo('.description')
 				
 			}else{
 				$('<h1>Oops, something is missing!</h1>').appendTo( ".produtos" );
 			}
-
+			
 		});
 	</script>
 </footer>

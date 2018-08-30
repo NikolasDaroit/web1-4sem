@@ -2,42 +2,23 @@
 <html>
 <head>
 	<title>Loja Virtual</title>
-	<style type="text/css">
-		ul {
-		    list-style-type: none;
-		    margin: 0;
-		    padding: 0;
-		    overflow: hidden;
-		    background-color: #333;
-		}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-		li {
-		    float: left;
-		}
+	<link rel="stylesheet" href="./trabalho_disciplina.css" >
+	<script src="./trabalho_disciplina.js"></script>
 
-		li a {
-		    display: block;
-		    color: white;
-		    text-align: center;
-		    padding: 14px 16px;
-		    text-decoration: none;
-		}
-
-		li a:hover {
-		    background-color: #111;
-		}	
-		.navbar {
-
-		}
+	<style type="text/css">		
 		.container {
 		  margin-top: 10px;
 		  display: grid;
-		  grid-template-columns: auto auto auto auto;
+		  grid-template-columns: auto auto auto auto auto;
 		  justify-content: space-evenly;
 		}
+		
 	</style>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	
 </head>
 <body>
@@ -50,7 +31,11 @@
 		  <li><a href="#">Products</a></li>
 		  <li><a href="#">Contact</a></li>
 		  <li><a href="#">About</a></li>
+		  <li> 
+			<button id="#cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg	"></i></button>
+		  </li>
 		</ul>
+		
 	</div>
 	<div class="container produtos">
 
