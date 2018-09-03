@@ -35,3 +35,7 @@ body {
 .right {
 	float: right;
 }
+
+li:hover {
+	    cursor: pointer;
+	}

@@ -15,7 +15,11 @@
 		  grid-template-columns: auto auto auto auto auto;
 		  justify-content: space-evenly;
 		}
-		
+		img:hover {
+		    cursor: pointer;
+		    background: black;
+		    border: 2px solid black;
+		}
 	</style>
 
 
@@ -27,12 +31,10 @@
 	</div>
 	<div class="navbar">
 		<ul>
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">Products</a></li>
-		  <li><a href="#">Contact</a></li>
-		  <li><a href="#">About</a></li>
+		  
+		  <li><a id="products">Products</a></li>
 		  <li> 
-			<button id="#cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg	"></i></button>
+			<a id="cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg"></i></a>
 		  </li>
 		</ul>
 		
@@ -63,7 +65,8 @@
 				
 			}
 			$('.card').on("click", function () {
-		       window.open('trabalho_disciplina_detalhe.html?image='+$(this).data('image'));
+			   window.location.href = 'trabalho_disciplina_detalhe.html?image='+$(this).data('image');
+		       
 		    });
 		    console.log( "ready!" );
 		});
