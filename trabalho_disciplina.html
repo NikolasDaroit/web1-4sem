@@ -5,6 +5,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+
 	<link rel="stylesheet" href="./trabalho_disciplina.css" >
 	<script src="./trabalho_disciplina.js"></script>
 
@@ -20,20 +21,35 @@
 		    background: black;
 		    border: 2px solid black;
 		}
+		.navbar li ul {
+			display: none;
+		}
+		.navbar li:hover ul {
+			display: block;
+			}
+		.navbar li ul{
+			list-style: none;
+			float: left;
+		}
 	</style>
 
 
 	
 </head>
 <body>
-	<div class="menu">
-		
-	</div>
+
 	<div class="navbar">
 		<ul>
 		  
-		  <li><a id="products">Products</a></li>
-		  <li> 
+		<li><a id="products">Products</a></li>
+		<li><a id="categories" href="#">Categories</a>
+			<ul>
+				<li><a class="category" data-category="suicidal_tendencies">Suicidal Tendencies</a></li>
+				<li><a class="category" data-category="taylor_swift">Taylor Swift</a></li>
+				<li><a class="category" data-category="matanza">Matanza</a></li>
+			</ul>
+		</li>
+		<li> 
 			<a id="cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg"></i></a>
 		  </li>
 		</ul>
@@ -50,13 +66,13 @@
 		
 		
 		$(function() {
-   
+   			var categorias = ["suicidal_tendencies", "taylor_swift", "matanza"];
 			for (var i = 0; i < 8; i++) {
 				var number = 1 + Math.floor(Math.random() * 50);
 				card  =  '<div class="card" data-image="'+number+'">'
 						+ '  <img src="https://picsum.photos/200/200/?image='+number+'" alt="" style="width:100%">'
 						+ '  <div class="container">'
-						+ '    <p>Architect & Engineer</p> '
+						+ '    <p>Some random text</p> '
 						+ '  </div>'
 						+ '</div>'
 
@@ -68,6 +84,16 @@
 			   window.location.href = 'trabalho_disciplina_detalhe.html?image='+$(this).data('image');
 		       
 		    });
+		    $('.card').each(function(){
+		    	$(this).addClass(categorias[~~(Math.random()*categorias.length)]);
+		    })
+		    $('.category').each(function () {
+			    var $this = $(this);
+			    $this.on("click", function () {
+			    	$('.card').hide();
+			        $('.card.'+$(this).data('category')).show();
+			    });
+			});
 		    console.log( "ready!" );
 		});
 	</script>

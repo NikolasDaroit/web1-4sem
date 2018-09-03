@@ -4,7 +4,7 @@ function appendImage(number, klass){
 	card  =   '<div class="card" data-image="'+number+'">'
 			+ '  <img src="https://picsum.photos/200/200/?image='+number+'" alt="" style="width:100%">'
 			+ '  <div class="container">'
-			+ '    <p>Architect & Engineer</p> '
+			+ '    <p>Some random text</p> '
 			+ '  </div>'
 			+ '</div>'
 

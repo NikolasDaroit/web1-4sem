@@ -20,7 +20,9 @@
 			max-width: 5%;
 		}
 		.description {
-			margin-right: 10%;
+			margin-top: 20px;
+			text-align: center;
+			font-weight: bold;
 		}
 		td {
 			text-align: center;
@@ -57,7 +59,7 @@
 		</ul>
 		
 	</div>
-
+	<div class="description"></div>
 	<div class="container total">
 
 
@@ -100,11 +102,10 @@
 				
 				
 				$('#carrinhodecompras').show()
-				var text = '<section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus enim, tincidunt nec tempor eu, ultricies id velit. Fusce nec varius tellus. Donec vulputate, sem non pharetra pellentesque, lectus orci facilisis dui, ut sodales ipsum ligula eu ante. Nulla rutrum tincidunt arcu. Suspendisse pellentesque imperdiet nulla quis iaculis. Sed nibh erat, pharetra nec congue ut, luctus nec metus. Maecenas tristique urna at sagittis tempus. Nulla et dolor dapibus, tempor metus in, aliquam est. Morbi sollicitudin congue tellus, ac pharetra diam dictum nec. Phasellus nibh sapien, dictum at pharetra vel, auctor hendrerit orci. </section>' 
-				$( text ).appendTo('.description')
+				
 				
 			}else{
-				var text = '<section>Sem itens no carrinho</section>' 
+				var text = '<section>Sem itens no carrinho. Selecione um item, após isso, acesse o carrinho novamente.</section>' 
 				$( text ).appendTo('.description');
 				$('#carrinhodecompras').hide()
 				
