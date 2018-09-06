@@ -11,13 +11,12 @@
 	<style type="text/css">
 		
 		.container {
-		  margin-top: 10px;
-		  display: grid;
-		  grid-template-columns: center;
-		  justify-content: space-evenly;
+			margin-top: 10px;
+			margin: auto;
+			max-width: 50%;
 		}
 		.produtos {
-			max-width: 5%;
+			
 		}
 		.description {
 			margin-top: 20px;
@@ -29,18 +28,32 @@
 		}
 		.bolder {
 			font-weight: bold;
+			background-color: rgba(0,0,0, 0.5);
 		}
+
 		thead {
 			background-color: rgba(0,0,0, 0.2);
 		}
 		table {
 		    border-collapse: collapse;
     		width: 100%;
+    		background-color: rgba(0,0,0, 0.1);
+    		border: 1px ;
 		}
-		tr:hover {
+		tbody tr:hover {
 			background-color: rgba(0,0,0, 0.1);
 		}
-		
+		th {
+			width: 25%;
+		}
+		table th:first-child {
+		  border-radius:10px 0 0 0;
+		}
+
+		table th:last-child {
+		  padding-right: 10px;
+		  border-radius:0 10px 0  0;
+		}
 	</style>
 
 
@@ -67,15 +80,19 @@
 			<table >
 			    <thead>
 			        <tr>
-			            <th width="30%">Produto</th>
-			            <th width="20%">Quantidade</th>
-			            <th width="20%">Unitário</th>
-			            <th width="30%">Total</th>
+			            <th>Produto</th>
+			            <th>Descricao</th>
+			            <th >Quantidade</th>
+			            <th >Unitário</th>
+			            <th >Total</th>
 			        </tr>
 			    </thead>
 			    <tbody>
-			    	<tr></tr>
+			    	
 				</tbody>
+				<tfoot>
+					
+				</tfoot>
 			</table>
 		
 		</div>		
@@ -89,16 +106,16 @@
 
 				let number = searchParams.get('image');
 
-				$('#carrinhodecompras tbody').last().before(appendToTable(number, number));
+				$('#carrinhodecompras tbody').append(appendToTable(number, number));
 				number = + number +  1;
-				$('#carrinhodecompras tbody').last().before(appendToTable(number, number));
+				$('#carrinhodecompras tbody').append(appendToTable(number, number));
 				number = + number +  1;
-				$('#carrinhodecompras tbody').last().before(appendToTable(number, number));
+				$('#carrinhodecompras tbody').append(appendToTable(number, number));
 				total = 0;
 				$('.price').each(function() {
 				    total += parseInt( $(this).text());
 				});
-				$('#carrinhodecompras tbody').last().before('<tr class= "bolder"> <td colspan="3" >Grand total </td> <td>'+total+'</td></tr>');
+				$('#carrinhodecompras tfoot').append('<tr class= "bolder"> <td colspan="3" >Grand total </td> <td colspan="2"> '+total+'</td></tr>');
 				
 				
 				$('#carrinhodecompras').show()

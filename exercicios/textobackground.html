@@ -16,6 +16,7 @@
 			margin: 20px 80px 20px 80px;
 			font-family: 'MedievalSharp', cursive;
 			color: #202020;
+			text-indent: 1cm;
 		}
 
 		h1 {
@@ -23,17 +24,21 @@
 			font-family: 'MedievalSharp', cursive;
 			margin-top: 40px;
 		}
+		p:nth-of-type(1) {
+			text-indent: 0px;
+		}
 		p:nth-of-type(1)::first-letter {
 			float: left;
-			
 			font-size: 50px;
-			background-color:rgba(32, 32, 32, 0.2);
+			background-color:rgba(32, 32, 32, 0.12);
 			height: 20px;
+			padding: 2px 6px 0px 6px;
 			
 
 		}
 		p::first-line {
 			font-weight: bold;
+
 		}
 		p:last-of-type{
 			margin-bottom: 100px;

@@ -14,11 +14,12 @@ function appendImage(number, klass){
 function appendToTable(number, klass){
 	// console.log(number, klass)
 	card  =  '<div class="card" data-image="'+number+'">'
-			+ '  <img src="https://picsum.photos/100/100/?image='+number+'" alt="" style="width:100%">'
+			+ '  <img src="https://picsum.photos/100/100/?image='+number+'" alt="image number '+number+'" style="width:100%">'
 			+ '</div>'
 
 	item =   '<tr><td>'+card+'</td>'
-			+'<td>'+(number%7)+'</td>'
+			+ '<td> <p> Random text </p></td>'
+			+'<td>'+(number%7+1)+'</td>'
 			+'<td>'+number+'</td>'
 			+'<td class="price">'+(number*(number%7))+'</td><tr>'
 

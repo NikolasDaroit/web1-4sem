@@ -1,117 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Loja Virtual</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<head>
+		<title>Loja Virtual</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
-	<link rel="stylesheet" href="./trabalho_disciplina.css" >
-	<script src="./trabalho_disciplina.js"></script>
+		<link rel="stylesheet" href="./trabalho_disciplina.css" >
+		<script src="./trabalho_disciplina.js"></script>
 
-	<style type="text/css">		
+		<style type="text/css">		
 
-		.flex-container {
-		  display: flex;
-		  flex-wrap: wrap;
-		  
-		  justify-content: flex-start;
-		  margin:20px;
-		}
-		.flex-container > div {
-		  margin: 10px;
-		  text-align: center;
-		  box-shadow: 0px 0px 0px 1px rgba(51, 51, 51, .5);;
-			transition: box-shadow 0.3s linear;
-			margin: 0.5em;
-
-		}
-		.flex-container > div:hover { 
-			cursor: pointer;
-			box-shadow: 0px 0px 0px 5px #333; 
-		}
-
-		.navbar li ul {
-			display: none;
-		}
-		.navbar li:hover ul {
-			display: block;
-			
+			.flex-container {
+			  display: flex;
+			  flex-wrap: wrap;
+			  
+			  justify-content: flex-start;
+			  margin:20px;
 			}
-		.navbar li ul{
-			list-style: none;
-			float: left;
-		}
-		
-	</style>
+			.flex-container > div {
+			  margin: 10px;
+			  text-align: center;
+			  box-shadow: 0px 0px 0px 1px rgba(51, 51, 51, .5);;
+				transition: box-shadow 0.3s linear;
+				margin: 0.5em;
 
+			}
+			.flex-container > div:hover { 
+				cursor: pointer;
+				box-shadow: 0px 0px 0px 5px #333; 
+			}
+
+			.navbar li ul {
+				display: none;
+			    position: absolute;
+			}
+			.navbar li:hover ul {
+				display: block;
+			}
+		</style>
+
+
+		
+	</head>
+	<body>
+
+		<div class="navbar">
+			<ul>
+			  
+			<li><a id="products">Products</a></li>
+			<li><a id="categories" href="#">Categories</a>
+				<ul>
+					<li><a class="category" data-category="suicidal_tendencies">Suicidal Tendencies</a></li>
+					<li><a class="category" data-category="taylor_swift">Taylor Swift</a></li>
+					<li><a class="category" data-category="matanza">Matanza</a></li>
+					<li><a class="category all">All</a></li>
+				</ul>
+			</li>
+			<li> 
+				<a id="cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg"></i></a>
+			  </li>
+			</ul>
+			
+		</div>
+		<div class="flex-container produtos">
+
+			
+		</div>
 
 	
-</head>
-<body>
+	
+		<script type="text/javascript">
+			
+			
+			$(function() {
+	   			var categorias = ["suicidal_tendencies", "taylor_swift", "matanza"];
+				for (var i = 0; i < 8; i++) {
+					var number = 1 + Math.floor(Math.random() * 50);
+					card  =  '<div class="card" data-image="'+number+'">'
+							+ '  <img src="https://picsum.photos/200/200/?image='+number+'" alt="" style="width:100%">'
+							+ '  <div >'
+							+ '    <p>Some random text</p> '
+							+ '  </div>'
+							+ '</div>'
 
-	<div class="navbar">
-		<ul>
-		  
-		<li><a id="products">Products</a></li>
-		<li><a id="categories" href="#">Categories</a>
-			<ul>
-				<li><a class="category" data-category="suicidal_tendencies">Suicidal Tendencies</a></li>
-				<li><a class="category" data-category="taylor_swift">Taylor Swift</a></li>
-				<li><a class="category" data-category="matanza">Matanza</a></li>
-				<li><a class="category all">All</a></li>
-			</ul>
-		</li>
-		<li> 
-			<a id="cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg"></i></a>
-		  </li>
-		</ul>
-		
-	</div>
-	<div class="flex-container produtos">
+					$( card ).appendTo( ".produtos" );
 
-		
-	</div>
-
-</body>
-<footer>
-	<script type="text/javascript">
-		
-		
-		$(function() {
-   			var categorias = ["suicidal_tendencies", "taylor_swift", "matanza"];
-			for (var i = 0; i < 8; i++) {
-				var number = 1 + Math.floor(Math.random() * 50);
-				card  =  '<div class="card" data-image="'+number+'">'
-						+ '  <img src="https://picsum.photos/200/200/?image='+number+'" alt="" style="width:100%">'
-						+ '  <div >'
-						+ '    <p>Some random text</p> '
-						+ '  </div>'
-						+ '</div>'
-
-				$( card ).appendTo( ".produtos" );
-
-				
-			}
-			$('.card').on("click", function () {
-			   window.location.href = 'trabalho_disciplina_detalhe.html?image='+$(this).data('image');
-		       
-		    });
-		    $('.card').each(function(){
-		    	$(this).addClass(categorias[~~(Math.random()*categorias.length)]);
-		    })
-		    $('.category').each(function () {
-			    var $this = $(this);
-			    $this.on("click", function () {
-			    	$('.card').hide();
-			        $('.card.'+$(this).data('category')).show();
+					
+				}
+				$('.card').on("click", function () {
+				   window.location.href = 'trabalho_disciplina_detalhe.html?image='+$(this).data('image');
+			       
 			    });
+			    $('.card').each(function(){
+			    	$(this).addClass(categorias[~~(Math.random()*categorias.length)]);
+			    })
+			    $('.category').each(function () {
+				    var $this = $(this);
+				    $this.on("click", function () {
+				    	$('.card').hide();
+				        $('.card.'+$(this).data('category')).show();
+				    });
+				});
+				$('.category.all').on("click", function () {
+					$('.card').show();
+				});
+			    console.log( "ready!" );
 			});
-			$('.category.all').on("click", function () {
-				$('.card').show();
-			});
-		    console.log( "ready!" );
-		});
-	</script>
-</footer>
+		</script>
+	</body>
 </html>
