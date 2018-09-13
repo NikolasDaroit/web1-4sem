@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posicionamento controle</title>
+<style>
+* { margin: 0; padding: 0;}
+#joystick {
+border: 1px solid black;
+border-radius:50%;
+margin: auto;
+width: 150px;
+height: 150px;
+padding: 10px;
+background: silver;
+}
+.btn {
+border: 1px solid black;
+border-radius:50%;
+margin: auto;
+width: 50px;
+height: 50px;
+text-align: center;
+line-height: 50px;
+font-size: xx-large;
+
+}
+#x { 
+background: blue;
+}
+#y {
+float: left; 
+background: green;
+}
+#a {
+float: right;
+background: red;
+}
+#b {
+clear:both;
+background: yellow;
+}
+.red {
+ border: 1px solid black;
+ float: left;
+background: red;
+border-radius: 0 50% 50% 0;
+width: 52%;
+
+}
+.blue{
+ border: 1px solid black;
+ float: right;
+background: blue;
+border-radius: 50% 0 0 50%;
+width: 52%;
+text-align: right;
+}
+#line{
+margin-top: 10px;
+}
+
+#line > div{
+border: 1px solid black;
+box-sizing: border-box;
+display: inline-block;
+text-align: center;
+}
+.l10 {
+width: 10%;
+}
+.l80 {
+width: 80%;
+}
+
+#square {
+margin-top: 10px;
+}
+#square > div{
+border: 1px solid black;
+box-sizing: border-box;
+position: relative;
+height: 50px;
+width: 50px;
+margin: auto;
+}
+#sqm1 {
+left: -25px;
+}
+#sqm2 {
+left: 25px;
+top: -50px;
+text-align: right;
+}
+#sqm3 {
+left: 25px;
+top: -50px;
+text-align: right;
+line-height: 80px;
+}
+#sqm4 {
+left: -25px;
+top: -100px;
+line-height: 80px;
+text-align: left;
+}
+#sqm5 {
+left: 0px;
+top: -175px;
+text-align: right;
+z-index: 1;
+text-align: center;
+line-height: 50px;
+
+background: white;
+}
+</style>
+</head>
+<body>
+
+<div id="joystick">
+      <div id="x" class="btn">X</div>
+      <div id="y" class="btn">Y</div>
+      <div id="a" class="btn">A</div>
+      <div id="b" class="btn">B</div>
+   </div>
+
+   <div class="red">width: 60%</div>
+   <div class="blue">width: 60%</div>
+   <div class="red">width: 60%</div>
+   <div class="blue">width: 60%</div>
+<div style="clear:both;"> </div>
+  
+<div id="line">
+  <div class="l10" style="text-align: left;">10%</div><div class="l80">80%</div><div class="l10" style="text-align: right;">10%</div>
+</div>
+
+
+<div id="square">
+  <div id="sqm1" class="sqm">1</div><div id="sqm2" class="sqm">2</div><div id="sqm3" class="sqm">3</div><div id="sqm4" class="sqm">4</div><div id="sqm5" class="sqm">5</div>
+</div>
+
+</body>
+</html>
