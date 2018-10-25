@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsivo</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;}
+	html,body {height: 100%;width: 100%}
+		.titulo {
+			background-color: black; 
+			color:white;
+			height: 7%;
+			line-height: 100%;
+		}
+		.titulo-item {
+			background-color: white;
+			height: 25px;
+			width: 25px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 10px;
+		}
+		.link {background-color: blue; color:white;}
+		.categoria {
+			background-color: green; 
+			color:white; 
+			float: left; 
+			width: 10%;
+			height: 100%; 
+
+			}
+		.categoria-item {
+			margin: 10px;
+			font-size: large;
+		}
+		.container {
+			margin-left: 10%;
+			width: 90%;
+			height: 100%;
+		}
+		.sessao {
+			background-color: brown; 
+			color:white;
+			margin: 10px;
+		}
+		.item {background-color: red; height: 150px;  width: 150px; margin: 10px;float: left;
+			max-width: 50%;}
+
+		
+		/* tablet */
+
+		@media (min-width: 768px) and (max-width: 1024px) {
+
+		  
+		   .item{
+		  	background-color: green; 
+		  	height: 300px; 
+		  	width: 300px;
+		  }	
+		  
+		}
+		@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		  
+		   .item{
+		  	background-color: green; 
+		  	height: 400px; 
+		  	width: 400px;
+		  }	
+		  .item:nth-of-type(3) ~ div{display: none;}
+		  
+		}
+
+		/* celular */
+		@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 640px)   and (orientation: portrait) 
+                    {
+
+		.categoria{
+			width: 30%;
+
+		}
+		  .item{
+		  	background-color: purple; 
+		  	height: 450px; 
+		  	width: 450px;
+		  }	
+		  .item:nth-of-type(3) ~ div{display: none;}
+		  
+		  
+		}
+		@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
+
+		
+		  .item{
+		  	background-color: purple; 
+		  	height: 400px; 
+		  	width: 400px;
+		  }	
+		  /*.item:nth-of-type(3) ~ div{display: none;}*/
+		  
+		  
+		}
+	</style>
+</head>
+<body>
+	<div class="titulo">Titulo
+		<div class="titulo-item"></div>
+		<div class="titulo-item"></div>
+		<div class="titulo-item"></div>
+	</div>
+	<div class="link">link link</div>
+	<div class="categoria">
+		<div class="categoria-item">categoria</div>
+		<div class="categoria-item">categoria</div>
+		<div class="categoria-item">categoria</div>
+	</div>
+	<div class="container">
+		<div class="sessao">Sessao</div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+
+</body>
+</html>

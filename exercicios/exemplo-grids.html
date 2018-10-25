@@ -1,0 +1,63 @@
+<style>
+body {
+	display: grid;
+	grid-template-columns: 100px;
+	grid-template-rows: 40px auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	font-family: Arial;
+}
+div, main, nav, h1, footer {
+	background: #eee;
+	border-radius: 8px;
+	border: 1px dashed silver;
+	margin: 0;
+}
+h1, footer {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+nav {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+main {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	padding: 10px;
+}
+footer {
+	text-align: right;
+}
+main div {
+	background: #ddd;
+	width: 100%;
+	height: 175px;
+}
+@media  (max-width: 1024px)  and (orientation: portrait){  
+	nav, main {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	main {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+</style>
+
+<h1>Título</h1>
+<nav>Menu</nav>
+<main>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</main>
+<footer>By Eu 2017</footer>

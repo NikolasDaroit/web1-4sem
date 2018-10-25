@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Dropdown - Linha de Código</title>
+    <style type="text/css">
+    * {box-sizing: border-box;}
+    .menu, .menu ul{
+    	list-style-type: none;
+    	padding: 0;
+    }
+    .menu li{
+    	border: 1px solid black;
+    	height: 30px;
+    	width: 100px;
+    	background-color: grey;
+
+
+    }
+    .menu ul {
+    	margin-left: 100%;
+    	margin-top: -20px;
+    	display: none;
+    }
+    .menu li:hover > ul {
+    	display: block;
+    }
+    a {
+    	color: white;
+    	text-decoration: none;
+    }
+    .menu li ul li{
+    	background-color: lightgray;
+    }
+    .menu li ul li ul li {
+    	background-color: lightblue;
+    }
+/*.menu {
+ font-family: Helvetica;
+ xposition: relative;
+ z-index: 999;
+}
+.menu li {
+ list-style-type: none;
+ border: 2px solid black;
+ width: 150px;
+ xfloat: left;
+ height: 20px;
+ padding-left: 4px;
+ background-color: white;
+ opacity: 0.7;
+ margin-top: -2px;
+ text-transform: capitalize;
+ xvertical-align: middle;
+ xline-xheight: 20px;
+}
+.menu a {
+ display: block;
+ width: 100%;
+ text-decoration: none;
+ color: black;
+}
+.menu li:hover {
+ background-color: silver;
+ opacity: 1;
+}
+.menu ul {
+	height: 20px;
+}
+.menu ul {
+ display: none;
+ float: left;
+}
+.menu li:hover > ul {
+ display: block;
+}
+.menu li li {
+ position: relative;
+ left:70%;
+ 
+}
+.menu ul ul {
+ margin-left: 154px;
+ margin-top: -20px;
+}
+.menu li:not(.menu li:empty) {
+color: red;
+}
+
+.menu > li > a:not(:only-child):after {
+ content: "▼";
+ float: right;
+}
+.menu li li a:not(:only-child):after {
+ content: "»";
+ xfloat: right;
+}*/
+    </style>
+</head>
+<body>
+	<ul class="menu">
+	<li><a href="#">Menu 1</a></li>
+	<li><a href="#">Menu 2</a>
+	<ul><li><a href="#">submenu 1</a></li><li><a href="#">submenu 2</a><ul><li><a href="#">subsubmenu 1</a></li><li><a href="#">subsubmenu 2</a><ul><li><a href="#">subsubsubmenu 1</a></li><li><a href="#">subsubsubmenu 2</a></li></ul></li></ul></li><li><a href="#">submenu 3</a></li></ul></li>
+	<li><a href="#">Menu 3</a></li>
+	<li><a href="#">Menu 4</a><ul><li><a href="#">submenu 1</a></li><li><a href="#">submenu 2</a></ul></li>
+	</ul>
+</body>
+</html>
