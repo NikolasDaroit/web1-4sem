@@ -1,0 +1,144 @@
+<style>
+    body {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 40px auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    font-family: Arial;
+    }
+    div, main, nav, h1, footer {
+    background: #eee;
+    border-radius: 8px;
+    border: 1px dashed silver;
+    margin: 0;
+    }
+    h1, footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    }
+    nav {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+    main {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 10px;
+    }
+    footer {
+    text-align: right;
+    }
+    main div {
+    background: #ddd;
+    width: 100%;
+    height: 175px;
+    }
+
+    * {box-sizing: border-box;}
+    .menu {position: relative;}
+    .menu, .menu ul{
+    list-style-type: none;
+    padding: 0;
+    }
+    .menu li{
+    border: 1px dashed silver;;
+    height: 30px;
+    width: 100px;
+    }
+    .menu li:hover{
+    background:#eee;  
+    }
+    .menu ul li {
+    width: 150px;
+    }
+    .menu ul {
+    margin-left: 100%;
+    margin-top: -20px;
+    display: none;
+    }
+    .menu li:hover > ul {
+    display: block;
+    z-index: 1;
+    }
+    a {
+    color: black;
+    text-decoration: none;
+    }
+    .menu li ul li{
+    background-color: gainsboro;
+    }
+
+    @media  (max-width: 1024px)  and (orientation: portrait){  
+	    nav, main {
+	    grid-column-start: 1;
+	    grid-column-end: 4;
+	    }
+	    main {
+	    grid-template-columns: repeat(2, 1fr);
+	    }
+	    .menu li{
+	    position:relative; 
+	    float:left; 
+	    width: calc(100% / 3);
+	    line-height: 100%;
+	    border-top: 0px;
+	    border-bottom: 0px;
+	    border-right: 1px dashed silver;
+	    }
+	    .menu { 
+	    	margin: 0; 
+	    }
+	    .menu li a{
+	    xcolor:#333; 
+	    text-decoration:none; padding:5px 10px; display:block;}
+	    .menu li  ul{
+	    position:relative; 
+	    top:80%; 
+	    left:-100%;
+	    background-color:#eee; 
+	    display:none;
+	    }  
+	    .menu li:hover ul{
+	    display:block;
+	    }
+	    .menu li ul li{
+	    border:1px dashed silver; 
+	    display:block; 
+	    width:200px;
+	    }
+    }
+
+</style>
+<h1>Título</h1>
+<nav>
+    <ul class="menu">
+        <li><a id="products">Products</a></li>
+        <li>
+            <a id="categories" href="#">Categories </a>
+            <ul>
+                <li><a class="category" data-category="suicidal_tendencies">Suicidal Tendencies</a></li>
+                <li><a class="category" data-category="taylor_swift">Taylor Swift</a></li>
+                <li><a class="category" data-category="matanza">Matanza</a></li>
+                <li><a class="category all">All</a></li>
+            </ul>
+        </li>
+        <li> 
+            <a id="cart" class="right">Cart <i class="fa fa-shopping-cart  fa-lg"></i></a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</main>
+<footer>By Eu 2017</footer>
