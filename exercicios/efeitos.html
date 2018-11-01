@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Efeitos</title>
+	<style type="text/css">
+
+		img{
+
+		position:absolute;
+		top:0;
+		left:0;}
+
+		#fundo {
+		filter: blur(5px);
+		filter: brightness(0.4);
+		}
+		#frente { 
+		clip-path: polygon(50% 0%, 61% 35%, 100% 35%, 68% 57%, 100% 100%, 50% 70%, 0% 100%, 32% 57%, 2% 35%, 39% 35%);
+		filter: sepia(100%);
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<img id="fundo" src="http://webacademico.canoas.ifrs.edu.br/~rcpinto/IFRS/php/CSS-11-Efeitos/ifrscanoas.jpg" >
+	<img id="frente" src="http://webacademico.canoas.ifrs.edu.br/~rcpinto/IFRS/php/CSS-11-Efeitos/ifrscanoas.jpg" >
+</body>
+</html>

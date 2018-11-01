@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transicao</title>
+        <style>
+            @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+            body {
+            background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+            z-index:0;
+            }
+            p {
+            font-family: Source Sans Pro
+            }
+            #tela {
+            position: absolute;
+            z-index: 3;
+            width: 98%;
+            height: 50em;
+            bottom: 0;
+            font-size: 100px;
+            font-weight: bold;
+            text-align: justify;
+            overflow: hidden;
+            transform-origin: 50% 100%;
+            transform: perspective(350px) rotateX(25deg);
+            }
+            @keyframes rolar {
+            0% { top: 100%; }
+            5% {opacity: 1;}
+            100% { top: -150%; }
+            }
+            @keyframes esconde {
+            0% { opacity: 0 }
+            20% { opacity: 1 }
+            80% { opacity: 1 }
+            100% { opacity: 0 }
+            }
+            @keyframes zoomout {
+            0% { opacity: 0; transform: scale(20, 20); }
+            10% {opacity: 1; }
+            90% {opacity: 1; }
+            100% { transform: scale(1, 1); opacity: 0; }
+            }
+            .texto {
+            position: absolute;
+            top: 100%;
+            animation: rolar 60s linear 20s forwards;
+            }
+            #azul {
+            opacity: 0;
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            left: 20%;
+            color: blue;
+            font-size: 100px;
+            animation: esconde 8s linear 2s forwards;
+            }
+            #swt  {
+            color: yellow;
+            }
+            #sw {
+            overflow: hidden;
+            font-family: serif;
+            color: yellow;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            animation: zoomout 10s linear 10s forwards;
+            }
+        </style>
+    </head>
+    <body>
+        <audio  onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 10000)">
+            <source src="https://vignette.wikia.nocookie.net/starwars/images/6/6a/MainTitle.ogg/revision/latest?cb=20131029173807" type="audio/ogg" />
+        </audio>
+        <p id="azul">Texto em azul...</p>
+        <p id="sw">STAR <br> WARS</p>
+        <div id="tela">
+            <div class="texto">
+                <p id="swt">
+                							Star Wars XXX
+                    The history of all hitherto existing societies is the history of class struggles
+                    .  Freeman and slave, patrician and plebeian, lord and serf, guild-master and jo
+                    urneyman, in a word, oppressor and oppressed, stood in constant opposition to on
+                    e another, carried on an uninterrupted, now hidden, now open fight, a fight that
+                    each time ended, either in a revolutionary re-constitution of society at large,
+                    or in the common ruin of the contending classes.  In the earlier epochs of hist
+                    ory, we find almost everywhere a complicated arrangement of society into various
+                    orders, a manifold gradation of social rank.  In ancient Rome we have patrician
+                    s, knights, plebeians, slaves; in the Middle Ages, feudal lords, vassals, guild-
+                    masters, journeymen, apprentices, serfs; in almost all of these classes, again, 
+                    subordinate gradations.  The modern bourgeois society that has sprouted from the
+                    ruins of feudal society has not done away with class antagonisms.  It has but e
+                    stablished new classes, new conditions of oppression, new forms of struggle in p
+                    lace of the old ones.  Our epoch, the epoch of the bourgeoisie, possesses, howev
+                    er, this distinctive feature: it has simplified the class antagonisms. Society a
+                    s a whole is more and more splitting up into two great hostile camps, into two g
+                    reat classes, directly facing each other: Bourgeoisie and Proletariat.  From the
+                    serfs of the Middle Ages sprang the chartered burghers of the earliest towns.  
+                    From these burgesses the first elements of the bourgeoisie were developed.  The 
+                    discovery of America, the rounding of the Cape, opened up fresh ground for the r
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
