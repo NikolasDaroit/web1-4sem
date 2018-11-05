@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Loja Virtual</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -15,6 +16,14 @@
 			margin: auto;
 			max-width: 50%;
 		}
+		@media only screen and (max-device-width: 640px) {
+		    .container {
+			
+				max-width: 100%;
+			}
+
+		}
+
 		.produtos {
 			
 		}
@@ -54,6 +63,8 @@
 		  padding-right: 10px;
 		  border-radius:0 10px 0  0;
 		}
+		
+
 	</style>
 
 
@@ -80,10 +91,10 @@
 			<table >
 			    <thead>
 			        <tr>
-			            <th>Produto</th>
-			            <th>Descricao</th>
-			            <th >Quantidade</th>
-			            <th >Unitário</th>
+			            <th>Product</th>
+			            <th>Description</th>
+			            <th>Quantity</th>
+			            <th>Price</th>
 			            <th >Total</th>
 			        </tr>
 			    </thead>
