@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="./trabalho_disciplina.css" >
 	<script src="./trabalho_disciplina.js"></script>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 		
 		.container {
@@ -95,7 +95,8 @@
 			            <th>Description</th>
 			            <th>Quantity</th>
 			            <th>Price</th>
-			            <th >Total</th>
+			            <th>Total</th>
+			            <th>Remove</th>
 			        </tr>
 			    </thead>
 			    <tbody>
@@ -105,7 +106,7 @@
 					
 				</tfoot>
 			</table>
-		
+			<button class="btn" style="margin-left:35%;" id="finalizar" >Finalizar compra</button>
 		</div>		
 	</div>
 
@@ -126,9 +127,9 @@
 				$('.price').each(function() {
 				    total += parseInt( $(this).text());
 				});
-				$('#carrinhodecompras tfoot').append('<tr class= "bolder"> <td colspan="3" >Grand total </td> <td colspan="2"> '+total+'</td></tr>');
+				$('#carrinhodecompras tfoot').append('<tr class= "bolder"> <td colspan="3" >Grand total </td> <td colspan="3"> '+total+'</td></tr>');
 				
-				
+				// $('#carrinhodecompras').after('<button class="btn" style="margin-left:35%;" id="finalizar" >Finalizar compra</button>');
 				$('#carrinhodecompras').show()
 				
 				

@@ -21,9 +21,9 @@ function appendToTable(number, klass){
 			+ '<td> <p> Random text </p></td>'
 			+'<td>'+(number%7+1)+'</td>'
 			+'<td>'+number+'</td>'
-			+'<td class="price">'+(number*(number%7))+'</td><tr>'
+			+'<td class="price">'+(number*(number%7+1))+'</td>'
+			+'<td class="excluir"><i class=" fa fa-trash"></i></td><tr>'
 
-	// $( item ).appendTo( klass );
 	return item;
 }
 
@@ -33,8 +33,21 @@ $(function() {
 		console.log('click');
 		window.location.href = './trabalho_disciplina_carrinho.html'
 	})
+	$('#voltar').on('click', function(){
+		console.log('click');
+		window.location.href = './trabalho_disciplina.html'
+	})
+	$('.cart').on('click', function(){
+		console.log('clickasd');
+		window.location.href = './trabalho_disciplina_carrinho.html'
+	})
 	$('#products').on('click', function(){
 		console.log('click');
 		window.location.href = './trabalho_disciplina.html'
 	})
+	$('#finalizar').on('click', function(){
+		alert('Compra finalizada. Verifique seu email para confirmar a compra!');
+		window.location.href = './trabalho_disciplina.html'
+	})
+	
 });
