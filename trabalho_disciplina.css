@@ -46,16 +46,16 @@ li:hover {
 }
 
 /* celular */
-		@media only screen and (min-device-width: 300px) 
-                   and (max-device-width: 700px)   and (orientation: portrait) 
-                    {
+@media only screen and (min-device-width: 300px) 
+           and (max-device-width: 700px)   and (orientation: portrait) 
+            {
 
-		.navbar{
-			background-color: red;
+.navbar{
+	background-color: red;
 
-		}
-		  
-		}
+}
+  
+}
 
 .btn {
     background-color: #555555;
@@ -70,4 +70,46 @@ li:hover {
 .btn:hover  {
 	background-color: #555999;
 	transition: background-color 1s;
+}
+
+/* ---- */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: flex-start;
+  margin:20px;
+}
+.flex-container > div {
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 0px 1px rgba(51, 51, 51, .5);;
+	transition: box-shadow 0.3s linear;
+	margin: 0.5em;
+
+}
+.flex-container > div:hover { 
+	cursor: pointer;
+	box-shadow: 0px 0px 0px 5px #333; 
+}
+
+.navbar li ul {
+	display: none;
+    position: absolute;
+}
+.navbar li:hover ul {
+	display: block;
+}
+
+@media only screen and (max-device-width: 640px) and (orientation: portrait) {
+    body {
+        background-color: lightblue;
+    }
+    /*.navbar {
+    	font-size: 50px;
+    }
+    .card {
+    	transform: scale(1.3);
+    }*/
 }

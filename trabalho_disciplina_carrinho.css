@@ -1,0 +1,52 @@
+.container {
+	margin-top: 10px;
+	margin: auto;
+	max-width: 50%;
+}
+@media only screen and (max-device-width: 640px) {
+    .container {
+	
+		max-width: 100%;
+	}
+
+}
+
+.produtos {
+	
+}
+.description {
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+td {
+	text-align: center;
+}
+.bolder {
+	font-weight: bold;
+	background-color: rgba(0,0,0, 0.5);
+}
+
+thead {
+	background-color: rgba(0,0,0, 0.2);
+}
+table {
+    border-collapse: collapse;
+	width: 100%;
+	background-color: rgba(0,0,0, 0.1);
+	border: 1px ;
+}
+tbody tr:hover {
+	background-color: rgba(0,0,0, 0.1);
+}
+th {
+	width: 25%;
+}
+table th:first-child {
+  border-radius:10px 0 0 0;
+}
+
+table th:last-child {
+  padding-right: 10px;
+  border-radius:0 10px 0  0;
+}
